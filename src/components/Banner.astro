@@ -1,6 +1,11 @@
+---
+import { Image } from "astro:assets";
+import rosco_logo from '../assets/rosco_logo.png'
+import banner from '../assets/banner.png'
+---
 <div>
-  <img src="rosco_logo.png" alt="A drawing of a rooster wearing a red fez and sunglasses." width="150" height="150"/>
-  <img src="banner.png" alt="A crude banner where « The Rooster's Nest » is written." height="150"/>
+  <Image src={rosco_logo} alt="A drawing of a rooster wearing a red fez and sunglasses."/>
+  <Image src={banner} alt="A crude banner where « The Rooster's Nest » is written."/>
 </div>
 
 <style>
