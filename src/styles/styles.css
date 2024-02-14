@@ -1,5 +1,22 @@
+html {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
 body {
-  font-family: 'Ubuntu', sans-serif;  
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    max-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    max-width: 500px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,4 +34,5 @@ body {
     color: #181818
   }
 }
+
 
