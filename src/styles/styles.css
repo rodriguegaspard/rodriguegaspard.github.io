@@ -6,6 +6,7 @@ body {
   /* styles for dark mode */
   body {
     background-color: #181818;
+    color: #ffffff;
   }
 }
 
@@ -13,6 +14,7 @@ body {
   /* styles for light mode */
   body {
     background-color: #ffffff;
+    color: #181818
   }
 }
 
