@@ -6,21 +6,37 @@ import rosco_logo_dark from '../assets/rosco_logo_dark.png'
 import banner_dark from '../assets/banner_dark.png'
 ---
 <div>
-  <Image id="dark_version" src={rosco_logo_dark} alt="A drawing of a rooster wearing a red fez and sunglasses."/>
-  <Image id="light_version" src={rosco_logo} alt="A drawing of a rooster wearing a red fez and sunglasses."/>
-  <Image id="dark_version" src={banner_dark} alt="A crude banner where « The Rooster's Nest » is written."/>
-  <Image id="light_version" src={banner} alt="A crude banner where « The Rooster's Nest » is written."/>
+  <Image 
+    id="light"
+    src={rosco_logo}
+    alt="A drawing of a rooster wearing a red fez and sunglasses."
+  />
+  <Image
+    id="light"
+    src={banner}
+    alt="A crude banner where « The Rooster's Nest » is written."
+  />
+  <Image 
+    id="dark" 
+    src={rosco_logo_dark}
+    alt="A drawing of a rooster wearing a red fez and sunglasses."
+  />
+  <Image 
+    id="dark"
+    src={banner_dark}
+    alt="A crude banner where « The Rooster's Nest » is written."
+  />
 </div>
 
 <style>
 @media (prefers-color-scheme: light) {
-  #dark_version {
+  #dark {
     display: none;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  #light_version {
+  #light {
     display: none;
   }
 }
