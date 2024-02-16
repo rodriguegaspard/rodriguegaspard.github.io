@@ -1,0 +1,19 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+import { formatDate } from "../js/utils"
+const allPosts = await Astro.glob('../pages/posts/*.md')
+---
+
+<BaseLayout title="The Rooster's Nest">
+  <ul>
+    {allPosts.map((post) => 
+      <li>
+        <article>
+          <h1>{post.frontmatter.title}</h1>
+          <h2>{formatDate(post.frontmatter.pubDate)}</h2>
+          <Fragment set:html={post.compiledContent()}/>
+        </article>
+      </li>
+    )}
+  </ul>
+</BaseLayout>
