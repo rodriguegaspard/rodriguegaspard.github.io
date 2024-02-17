@@ -58,7 +58,7 @@ class Particle {
     this.y = y;
     this.color = color;
   }
-  newPos() {
+  applyGravity() {
     this.gravitySpeed += this.gravity;
     this.x += this.speedX;
     this.y += this.speedY + this.gravitySpeed;
@@ -86,11 +86,8 @@ class Sandbox {
   update(renderer: Renderer) {
     renderer.clear();
     for (var particle of this.particles) {
-      particle.newPos();
+      particle.applyGravity();
       renderer.renderParticle(particle, "glowing");
-      if (this.isOutOfBounds(particle, renderer)){
-        this.clearParticle(particle);
-      }
     }
   }
 }
