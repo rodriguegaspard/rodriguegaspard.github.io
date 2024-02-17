@@ -22,8 +22,8 @@ body {
 /* Color palette for dark mode:
  * Background : #100c08
  * Text : #fffafa
- * Links : #FF2442
- * Highlights: #FFB830
+ * Links : #ff2442
+ * Highlights: #ffb830
  * */
 
 @media (prefers-color-scheme: dark) {
@@ -38,10 +38,10 @@ body {
 }
 
 /* Color palette for light mode:
- * Background : #FFEDDA
- * Text : #34222E
- * Links : #FF6363
- * Highlights: #FFBD69
+ * Background : #ffedda
+ * Text : #34222e
+ * Links : #ff6363
+ * Highlights: #ffbd69
  * */
 
 @media (prefers-color-scheme: light) {
@@ -50,7 +50,6 @@ body {
     background-color: #ffedda;
     color: #34222e;
   }
-
   a {
     color: #ff6363;
   }

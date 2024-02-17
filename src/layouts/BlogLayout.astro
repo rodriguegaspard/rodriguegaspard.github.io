@@ -3,17 +3,44 @@ import BaseLayout from "./BaseLayout.astro"
 import { formatDate } from "../js/utils"
 const allPosts = await Astro.glob('../pages/posts/*.md')
 ---
-
 <BaseLayout title="The Rooster's Nest">
-  <ul>
-    {allPosts.map((post) => 
-      <li>
-        <article>
-          <h1>{post.frontmatter.title}</h1>
-          <h2>{formatDate(post.frontmatter.pubDate)}</h2>
-          <Fragment set:html={post.compiledContent()}/>
-        </article>
-      </li>
-    )}
-  </ul>
+  <div class="blog">
+    <ul>
+      {allPosts.map((post) => 
+        <li>
+          <article class="blogpost">
+            <header>
+              <a href={post.url}><h1>{post.frontmatter.title}</h1></a>
+              <i>{formatDate(post.frontmatter.pubDate)}</i>
+            </header>
+            <Fragment set:html={post.compiledContent()}/>
+          </article>
+        </li>
+      )}
+    </ul>
+  </div>
 </BaseLayout>
+
+<style>
+ul {
+  list-style-type: none;
+}
+
+.blogpost{
+  border-bottom-style: solid;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blogpost{
+    border-bottom-color: #ffb830;
+    border-bottom-width: 1px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .blogpost{
+    border-bottom-color: #ffbd69;
+    border-bottom-width: 1px;
+  }
+}
+</style>
