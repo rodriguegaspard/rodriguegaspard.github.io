@@ -1,5 +1,3 @@
-let isDrawing = false;
-
 class Renderer {
   canvas = document.querySelector("canvas")!;
   context = this.canvas.getContext("2d")!;
@@ -39,7 +37,8 @@ class Sandbox {
   constructor() {
     this.particles = [];
   }
-  add(particle: Particle) {
+  createParticle(x: number, y:number, type:string, color: string) {
+    var particle = new Particle(type, x, y, color);
     this.particles.push(particle);
   }
   update(renderer: Renderer) {
@@ -53,14 +52,10 @@ class Sandbox {
 
 var sandbox = new Sandbox();
 var renderer = new Renderer();
+let isDrawing = false;
 setInterval(() => {
   sandbox.update(renderer);
 }, 10)
-
-function draw(x:number, y:number, sandbox:Sandbox) {
-  var drop = new Particle("water", x, y, "blue");
-  sandbox.add(drop);
-}
 
 renderer.canvas.addEventListener('mousedown', () => {
   isDrawing = true;
@@ -68,11 +63,10 @@ renderer.canvas.addEventListener('mousedown', () => {
 
 renderer.canvas.addEventListener('mousemove', (e) => {
   if (isDrawing) {
-    draw(e.offsetX, e.offsetY, sandbox);
+    sandbox.createParticle(e.offsetX, e.offsetY, "water", "blue")
   }
 });
 
 renderer.canvas.addEventListener('mouseup', () => {
   isDrawing = false;
 });
-
