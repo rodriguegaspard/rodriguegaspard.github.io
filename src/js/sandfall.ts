@@ -63,9 +63,17 @@ class Particle {
     this.x += this.speedX;
     this.y += this.speedY + this.gravitySpeed;
   }
+  collisionDetection(sandbox: Sandbox, renderer: Renderer) {
+    // Border collision collision
+    if (this.x < 0) this.x = 0;
+    if (this.y < 0) this.y = 0;
+    if (this.x > renderer.canvas.width) this.x = renderer.canvas.height;
+    if (this.y > renderer.canvas.height) this.y = renderer.canvas.height;
+  }
 }
 
 class Sandbox {
+  //Change this to a 2-dimensional matrix, this is EXTREMELY inefficient!
   particles: Particle[];
   constructor() {
     this.particles = [];
@@ -87,7 +95,8 @@ class Sandbox {
     renderer.clear();
     for (var particle of this.particles) {
       particle.applyGravity();
-      renderer.renderParticle(particle, "glowing");
+      particle.collisionDetection(this, renderer);
+      renderer.renderParticle(particle, "gas");
     }
   }
 }
