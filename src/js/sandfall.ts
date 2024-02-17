@@ -7,6 +7,9 @@ class Renderer {
     this.context.fillStyle = particle.color;
     this.context.fillRect(particle.x, particle.y, 1, 1);
   }
+  clear() {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  }
 }
 
 class Particle {
@@ -40,7 +43,7 @@ class Sandbox {
     this.particles.push(particle);
   }
   update(renderer: Renderer) {
-    renderer.context.clearRect(0, 0, renderer.canvas.width, renderer.canvas.height);
+    renderer.clear();
     for (var particle of this.particles) {
       particle.newPos();
       renderer.draw(particle);
