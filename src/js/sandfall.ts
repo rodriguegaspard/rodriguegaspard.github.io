@@ -18,7 +18,7 @@ class EventHandler {
     });
     renderer.canvas.addEventListener('mousemove', (e) => {
       if (this.drawingMode) {
-        sandbox.createParticle(e.offsetX, e.offsetY, "sand", "gold")
+          sandbox.createParticle(e.offsetX, e.offsetY, "sand", "gold")
       }
     });
     renderer.canvas.addEventListener('mouseup', () => {
@@ -57,6 +57,12 @@ class Sandbox {
   createParticle(x: number, y:number, type:string, color: string) {
     var particle = new Particle(type, x, y, color);
     this.particles.push(particle);
+  }
+  clearParticle(particle: Particle){
+    const index = this.particles.indexOf(particle, 0);
+      if (index > -1) {
+        this.particles.splice(index, 1);
+      }
   }
   update(renderer: Renderer) {
     renderer.clear();
