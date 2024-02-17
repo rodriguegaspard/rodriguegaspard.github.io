@@ -1,8 +1,14 @@
-const canvas = document.querySelector("canvas")!;
-const context = canvas.getContext('2d')!;
 let isDrawing = false;
 
-//(color, x, y, type, ctx) {
+class Renderer {
+  canvas = document.querySelector("canvas")!;
+  context = this.canvas.getContext("2d")!;
+  draw(particle: Particle) {
+    this.context.fillStyle = particle.color;
+    this.context.fillRect(particle.x, particle.y, 1, 1);
+  }
+}
+
 class Particle {
   type: string;
   x: number;
@@ -17,10 +23,6 @@ class Particle {
     this.x = x;
     this.y = y;
     this.color = color;
-  }
-  update() {
-    context.fillStyle = this.color;
-    context.fillRect(this.x, this.y, 1, 1);
   }
   newPos() {
     this.gravitySpeed += this.gravity;
@@ -37,18 +39,19 @@ class Sandbox {
   add(particle: Particle) {
     this.particles.push(particle);
   }
-  update() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    for (var p of this.particles) {
-      p.newPos();
-      p.update();
+  update(renderer: Renderer) {
+    renderer.context.clearRect(0, 0, renderer.canvas.width, renderer.canvas.height);
+    for (var particle of this.particles) {
+      particle.newPos();
+      renderer.draw(particle);
     }
   }
 }
 
-var sandbox = new Sandbox(); 
+var sandbox = new Sandbox();
+var renderer = new Renderer();
 setInterval(() => {
-  sandbox.update();
+  sandbox.update(renderer);
 }, 10)
 
 function draw(x:number, y:number, sandbox:Sandbox) {
@@ -56,17 +59,17 @@ function draw(x:number, y:number, sandbox:Sandbox) {
   sandbox.add(drop);
 }
 
-canvas.addEventListener('mousedown', () => {
+renderer.canvas.addEventListener('mousedown', () => {
   isDrawing = true;
 });
 
-canvas.addEventListener('mousemove', (e) => {
+renderer.canvas.addEventListener('mousemove', (e) => {
   if (isDrawing) {
     draw(e.offsetX, e.offsetY, sandbox);
   }
 });
 
-canvas.addEventListener('mouseup', () => {
+renderer.canvas.addEventListener('mouseup', () => {
   isDrawing = false;
 });
 
