@@ -1,12 +1,29 @@
 class Renderer {
   canvas = document.querySelector("canvas")!;
   context = this.canvas.getContext("2d")!;
-  draw(particle: Particle) {
+  renderParticle(particle: Particle) {
     this.context.fillStyle = particle.color;
     this.context.fillRect(particle.x, particle.y, 1, 1);
   }
   clear() {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  }
+}
+
+class EventHandler {
+  drawingMode = false;
+  drawMode() {
+    renderer.canvas.addEventListener('mousedown', () => {
+      this.drawingMode = true;
+    });
+    renderer.canvas.addEventListener('mousemove', (e) => {
+      if (this.drawingMode) {
+        sandbox.createParticle(e.offsetX, e.offsetY, "sand", "gold")
+      }
+    });
+    renderer.canvas.addEventListener('mouseup', () => {
+      this.drawingMode = false;
+    });
   }
 }
 
@@ -45,28 +62,15 @@ class Sandbox {
     renderer.clear();
     for (var particle of this.particles) {
       particle.newPos();
-      renderer.draw(particle);
+      renderer.renderParticle(particle);
     }
   }
 }
 
 var sandbox = new Sandbox();
 var renderer = new Renderer();
-let isDrawing = false;
+var events = new EventHandler();
+events.drawMode();
 setInterval(() => {
   sandbox.update(renderer);
 }, 10)
-
-renderer.canvas.addEventListener('mousedown', () => {
-  isDrawing = true;
-});
-
-renderer.canvas.addEventListener('mousemove', (e) => {
-  if (isDrawing) {
-    sandbox.createParticle(e.offsetX, e.offsetY, "water", "blue")
-  }
-});
-
-renderer.canvas.addEventListener('mouseup', () => {
-  isDrawing = false;
-});
