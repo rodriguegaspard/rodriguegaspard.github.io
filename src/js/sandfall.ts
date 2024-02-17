@@ -18,7 +18,7 @@ class EventHandler {
     });
     renderer.canvas.addEventListener('mousemove', (e) => {
       if (this.drawingMode) {
-          sandbox.createParticle(e.offsetX, e.offsetY, "sand", "gold")
+        sandbox.createParticle(e.offsetX, e.offsetY, "sand", "gold")
       }
     });
     renderer.canvas.addEventListener('mouseup', () => {
@@ -60,15 +60,21 @@ class Sandbox {
   }
   clearParticle(particle: Particle){
     const index = this.particles.indexOf(particle, 0);
-      if (index > -1) {
-        this.particles.splice(index, 1);
-      }
+    if (index > -1) {
+      this.particles.splice(index, 1);
+    }
+  }
+  isOutOfBounds(particle: Particle, renderer: Renderer){
+    return (particle.x < 0) || (particle.y < 0) || (particle.x > renderer.canvas.width) || (particle.y > renderer.canvas.height);
   }
   update(renderer: Renderer) {
     renderer.clear();
     for (var particle of this.particles) {
       particle.newPos();
       renderer.renderParticle(particle);
+      if (this.isOutOfBounds(particle, renderer)){
+        this.clearParticle(particle);
+      }
     }
   }
 }
