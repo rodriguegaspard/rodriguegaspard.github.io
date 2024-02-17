@@ -19,20 +19,39 @@ body {
   }
 }
 
+/* Color palette for dark mode:
+ * Background : #100c08
+ * Text : #fffafa
+ * Links : #FF2442
+ * Highlights: #FFB830
+ * */
+
 @media (prefers-color-scheme: dark) {
   /* styles for dark mode */
   body {
-    background-color: #181818;
-    color: #ffffff;
+    background-color: #100c08;
+    color: #fffafa;
+  }
+  a {
+    color: #ff2442;
   }
 }
+
+/* Color palette for light mode:
+ * Background : #FFEDDA
+ * Text : #34222E
+ * Links : #FF6363
+ * Highlights: #FFBD69
+ * */
 
 @media (prefers-color-scheme: light) {
   /* styles for light mode */
   body {
-    background-color: #ffffff;
-    color: #181818
+    background-color: #ffedda;
+    color: #34222e;
+  }
+
+  a {
+    color: #ff6363;
   }
 }
-
-
