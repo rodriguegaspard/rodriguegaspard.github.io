@@ -6,9 +6,11 @@ import BaseLayout from "../layouts/BaseLayout.astro"
   <h2>Introduction</h2>
   <p>I'm a master's student in computer science in Kuala Lumpur, looking for freelance work in order to hone my skills in various fields. I very often write software on my own to solve niche problems. I'm also looking for open-source projects to support.</p>
   <h2>Professional experience</h2>
+  <div class="experience-header">
   <h3>Junior Software Developer</h3>
-  <h4><a href="https://esad-talm.fr/">École supérieure d'art et de design TALM</a> - FRANCE</h4>
-  <h4>March 2020 - November 2022</h4>
+    <h4><a href="https://esad-talm.fr/">École supérieure d'art et de design TALM</a> - FRANCE</h4>
+    <i>March 2020 - November 2022</i>
+  </div>
   <ul>
     <li>Creation of a database management application using <a href="https://www.filemaker.com/downloads/">Filemaker</a> from scratch, in order to manage students, transactions, classes, administrative documents and schedlies.</li>
     <li>Management of an online payment solution for students</li>
@@ -17,9 +19,11 @@ import BaseLayout from "../layouts/BaseLayout.astro"
     <li>Formation of an intern between August 2022 and November 2022</li>
   </ul>
   <h2>Academic background</h2>
+  <div class="experience-header">
   <h3>Master in Computer Science</h3>
-  <h4><a href="https://www.unikl.edu.my/">UNIKL</a> - Malaysia</h4>
-  <h4>Ongoing</h4>
+    <h4><a href="https://www.unikl.edu.my/">UNIKL</a> - MALAYSIA</h4>
+    <i>Ongoing</i>
+  </div>
   <ul>
     <li>Computational complexity theory</li>
     <li>Deep learning</li>
@@ -27,18 +31,22 @@ import BaseLayout from "../layouts/BaseLayout.astro"
     <li>Innovation, leadership and entrepreneurship</li>
     <li>Algorithm analysis</li>
   </ul>
+  <div class="experience-header">
   <h3>Bachelor's in Web Development</h3>
-  <h4><a href="https://www.mydigitalschool.com/">MyDigitalSchool Angers</a> - France</h4>
-  <h4>2021 - 2022</h4>
-  <h4>Bachelor's degree in Computer Science</h4>
+    <h4><a href="https://www.mydigitalschool.com/">MyDigitalSchool Angers</a> - FRANCE</h4>
+    <i>2021 - 2022</i>
+  </div>
   <ul>
     <li>Design patterns with C#</li>
     <li>Web frameworks with React and Vue.JS</li>
     <li>Mobile development with ReactNative</li>
     <li>Web design</li>
   </ul>
-  <h4><a href="https://www.univ-angers.fr/fr/index.html">Université d'Angers</a> - FRANCE</h4>
-  <h4>2016 - 2020</h4>
+  <div class="experience-header">
+  <h3>Bachelor's degree in Computer Science</h3>
+    <h4><a href="https://www.univ-angers.fr/fr/index.html">Université d'Angers</a> - FRANCE</h4>
+    <i>2016 - 2020</i>
+  </div>
   <ul>
     <li>Automata theory, using OCaml</li>
     <li>Graph theory</li>
@@ -59,7 +67,6 @@ import BaseLayout from "../layouts/BaseLayout.astro"
     <li>Vue.js</li>
     <li>Astro.js</li>
     <li>React</li>
-    <li>Tailwind</li>
     <li>Bash</li>
     <li>UNIX</li>
     <li>SQL</li>
@@ -79,11 +86,6 @@ import BaseLayout from "../layouts/BaseLayout.astro"
     <li>git</li>
   </ul>
   <h2>Soft skills</h2>
-  <ul>
-    <li>Working in autonomy</li>
-    <li>Adaptability</li>
-    <li>Efficient communication</li>
-  </ul>
   <h3>Languages</h3>
   <ul>
     <li>French : Native</li>
@@ -91,3 +93,14 @@ import BaseLayout from "../layouts/BaseLayout.astro"
     <li>Japanese : Novice</li>
   </ul>
 </BaseLayout>
+
+<style>
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.experience-header > * {
+  margin: 3px;
+}
+</style>
