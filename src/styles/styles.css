@@ -32,8 +32,13 @@ body {
     background-color: #100c08;
     color: #fffafa;
   }
-  a {
+  a, h1 {
     color: #ff2442;
+  }
+  h2 {
+    text-decoration: underline;
+    text-decoration-color:#ffb830;
+    color:#ffb830;
   }
 }
 
@@ -50,7 +55,18 @@ body {
     background-color: #ffedda;
     color: #34222e;
   }
-  a {
+  a, h1 {
     color: #ff6363;
   }
+  h2 {
+    text-decoration: underline;
+    text-decoration-color: #ffbd69;
+    color: #ffbd69;
+  }
 }
+
+.blogpost > * > img {
+  width: 100%;
+  height: auto;
+}
+
