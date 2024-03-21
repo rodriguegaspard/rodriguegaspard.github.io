@@ -10,7 +10,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md')
         <li>
           <article class="blogpost">
             <header>
-              <a href={post.url}><h1>{post.frontmatter.title}</h1></a>
+              <h1>{post.frontmatter.title}</h1>
               <i>{formatDate(post.frontmatter.pubDate)}</i>
             </header>
             <Fragment set:html={post.compiledContent()}/>
