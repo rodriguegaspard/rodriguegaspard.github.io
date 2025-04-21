@@ -1,106 +1,82 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+const isPrint = false;
 ---
-<BaseLayout title="Resumé">
-  <h1>RODRIGUE GASPARD</h1>
-  <h2>Introduction</h2>
-  <p>I'm a master's student in computer science in Kuala Lumpur, looking for freelance work in order to hone my skills in various fields. I very often write software on my own to solve niche problems. I'm also looking for open-source projects to support.</p>
-  <h2>Professional experience</h2>
-  <div class="experience-header">
-  <h3>Junior Software Developer</h3>
-    <h4><a href="https://esad-talm.fr/">École supérieure d'art et de design TALM</a> - FRANCE</h4>
-    <i>March 2020 - November 2022</i>
-  </div>
-  <ul>
-    <li>Creation of a database management application using <a href="https://www.filemaker.com/downloads/">Filemaker</a> from scratch, in order to manage students, transactions, classes, administrative documents and schedlies.</li>
-    <li>Management of an online payment solution for students</li>
-    <li>Formation of users across all the three sites of TALM in the form of seminars</li>
-    <li>Redaction of a user and technical documentation using pandoc</li>
-    <li>Formation of an intern between August 2022 and November 2022</li>
-  </ul>
-  <h2>Academic background</h2>
-  <div class="experience-header">
-  <h3>Master in Computer Science</h3>
-    <h4><a href="https://www.unikl.edu.my/">UNIKL</a> - MALAYSIA</h4>
-    <i>Ongoing</i>
-  </div>
-  <ul>
-    <li>Computational complexity theory</li>
-    <li>Deep learning</li>
-    <li>Research methodology</li>
-    <li>Innovation, leadership and entrepreneurship</li>
-    <li>Algorithm analysis</li>
-  </ul>
-  <div class="experience-header">
-  <h3>Bachelor's in Web Development</h3>
-    <h4><a href="https://www.mydigitalschool.com/">MyDigitalSchool Angers</a> - FRANCE</h4>
-    <i>2021 - 2022</i>
-  </div>
-  <ul>
-    <li>Design patterns with C#</li>
-    <li>Web frameworks with React and Vue.JS</li>
-    <li>Mobile development with ReactNative</li>
-    <li>Web design</li>
-  </ul>
-  <div class="experience-header">
-  <h3>Bachelor's degree in Computer Science</h3>
-    <h4><a href="https://www.univ-angers.fr/fr/index.html">Université d'Angers</a> - FRANCE</h4>
-    <i>2016 - 2020</i>
-  </div>
-  <ul>
-    <li>Automata theory, using OCaml</li>
-    <li>Graph theory</li>
-    <li>Object-oriented programming in C++17</li>
-    <li>Computer architecture and x86 assembly language</li>
-    <li>Mathematical logic using Prolog</li>
-    <li>Computer graphics using OpenGL</li>
-    <li>UNIX</li>
-    <li>Web development with HTML5/CSS3/Javascript</li>
-    <li>Database theory using PostgreSQL</li>
-  </ul>
-  <h2>Hard skills</h2>
-  <h3>Tech Stack</h3>
-  <ul>
-    <li>C/C++/C#</li>
-    <li>Python</li>
-    <li>CSS3/HTML5/Javascript</li>
-    <li>Vue.js</li>
-    <li>Astro.js</li>
-    <li>React</li>
-    <li>Bash</li>
-    <li>UNIX</li>
-    <li>SQL</li>
-    <li>PostgreSQL</li>
-    <li>Filemaker</li>
-    <li>GraphQL</li>
-    <li>Perl</li>
-    <li>Rust</li>
-    <li>Haskell</li>
-  </ul>
-  <h3>Software</h3>
-  <ul>
-    <li>FFmpeg</li>
-    <li>pandoc</li>
-    <li>curl</li>
-    <li>plantuml</li>
-    <li>git</li>
-  </ul>
-  <h2>Soft skills</h2>
-  <h3>Languages</h3>
-  <ul>
-    <li>French : Native</li>
-    <li>English : Fluent (TOEFL iBT 107/120)</li>
-    <li>Japanese : Novice</li>
-  </ul>
-</BaseLayout>
 
-<style>
-.experience-header {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-.experience-header > * {
-  margin: 3px;
-}
-</style>
+<BaseLayout title="Resumé">
+  <div id="pdf-content">
+    <header>
+      <h1>Rodrigue GASPARD</h1>
+      <h2>Software Developer (Python, Rust) | FileMaker Consultant</h2>
+    </header>
+    <ul class="contact">
+      <li>📬 : <a href="mailto:rodriguegaspard@gmail.com">rodriguegaspard@gmail.com</a></li>
+      <li>📱 : <a href="https://wa.me/60167652453">(+60)167652453</a></li>
+      <li>💼 : <a href="https://www.linkedin.com/in/rodriguegaspard/">LinkedIn profile</a></li>
+      <li>💻 : <a href="https://github.com/rodriguegaspard">GitHub profile</a></li>
+    </ul>
+    <section>
+      <h2>Summary</h2>
+      <p>Master’s graduate from UniKL MIIT, Malaysia, with 2 years of hands-on experience as a Software Developer in Angers, France. Actively seeking fully remote opportunities—open to full-time, part-time, or freelance roles. Strong interest in backend development, data engineering, and AI, but open to exploring other areas as well. Highly adaptable with flexible working hours, bringing a global perspective, solid technical skills, and a collaborative mindset to remote teams.</p>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML5 / CSS3 / JavaScript / TypeScript</li>
+        <li>React / Vue.js / Astro</li>
+        <li>C / x86 Assembly</li>
+        <li>C++ / C# / Java</li>
+        <li>Python / Pandas / Numpy / Matplotlib</li>
+        <li>Unix / Bash / zsh</li>
+        <li>Git / GitHub</li>
+        <li>TensorFlow / PyTorch / Keras / OpenCV / Ultralytics</li>
+        <li>Rust / WebAssembly</li>
+        <li>SQL / PostgreSQL / MariaDB / SQLite / MySQL</li>
+        <li>FileMaker Pro / FileMaker Server</li>
+        <li>VirtualBox / Docker / Kubernetes</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Experience</h2>
+      <div class="item">
+        <h3>Software Developer – ESAD TALM</h3>
+        <span class="date">March 2021 – November 2022</span>
+        <p>Designed and implemented a comprehensive relational database system from scratch using FileMaker Pro, unifying three schools under a single data infrastructure.</p>
+        <p>Developed customized layouts and tables to manage tuition, class schedules, invoices, mailing lists, diplomas, and contact information, drastically improving administrative efficiency.</p>
+        <p>Integrated Wero online payment system to streamline student payments for tuition and bookstore purchases.</p>
+        <p>Delivered significant time savings across all campuses by accelerating data entry and reducing manual errors.</p>
+        <p>Trained school administrative staff individually, supervised interns and maintained technical and user documentation ensuring smooth onboarding and sustained system usage.</p>
+        <p>Operated autonomously with minimal supervision, demonstrating strong initiative, adaptability, and self-management.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <div class="item">
+        <h3>Master’s Degree in Computer Science - Universiti Kuala Lumpur (UniKL) — GPA: 3.89</h3>
+        <span class="date">2023 – 2025</span>
+        <p>Specialized in Artificial Intelligence, Machine Learning, and Deep Learning.</p>
+        <p>Studied algorithmic complexity, design patterns (C#), management, and research methodology.</p>
+        <p>Hands-on experience with Python libraries: NumPy, Pandas, TensorFlow, PyTorch, Keras, and OpenCV.</p>
+        <p>Applied linear regression and other statistical models in practical ML contexts.</p>
+      </div>
+      <div class="item">
+        <h3>B.S. in Computer Science – University of Angers</h3>
+        <span class="date">2016 – 2020</span>
+        <p>Covered low-level programming (C, Pascal, x86 ASM), OOP (C++, C#, Java), and functional programming (OCaml)</p>
+        <p>Practical experience with React, Vue, SQL, Python, OpenGL, and Unix systems.</p>
+        <p>Studied graph theory, shell scripting, and computer graphics (OpenGL, SDL2).</p>
+      </div>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <div class="item">
+        <h3>Master's thesis</h3>
+        <span class="date">Efficient Vision-Based Hand Gesture Recognition on Low-Power Devices</span>
+        <p>Researched and implemented real-time hand gesture recognition using fine-tuned YOLOv11 models for object detection and pose estimation.</p>
+        <p>Conducted extensive benchmarking on CPU-focused platforms including a mid-range Dell laptop and a Raspberry Pi 4B, analyzing performance trade-offs.</p>
+        <p>Evaluated multiple model export formats (e.g., OpenVINO) to assess their impact on inference speed and accuracy.</p>
+        <p>Developed the system using Python, Keras, OpenCV, and Ultralytics, focusing on efficiency for edge devices.</p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
