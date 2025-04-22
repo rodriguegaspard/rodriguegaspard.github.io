@@ -1,58 +1,64 @@
----
-import { Image } from "astro:assets"
-import logo from '../assets/logo.png'
-import banner from '../assets/banner.png'
-import logo_dark from '../assets/logo_dark.png'
-import banner_dark from '../assets/banner_dark.png'
----
-<div>
-  <Image 
-    id="light"
-    src={logo}
-    alt="A drawing of a rooster wearing a red fez and sunglasses."
-  />
-  <Image
-    id="light"
-    src={banner}
-    alt="A crude banner where « The Rooster's Nest » is written."
-  />
-  <Image 
-    id="dark" 
-    src={logo_dark}
-    alt="A drawing of a rooster wearing a red fez and sunglasses."
-  />
-  <Image 
-    id="dark"
-    src={banner_dark}
-    alt="A crude banner where « The Rooster's Nest » is written."
-  />
-</div>
+<svg
+    width="150px"
+    height="150px"
+    viewBox="0 0 200 200"
+    version="1.1"
+    id="rooster"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+      id="defs1" />
+  <g
+      id="layer1"
+      style="stroke-width:1.7;stroke-dasharray:none">
+  <path
+      d="m 49.975526,100.27993 c -10.131985,10.2303 -22.035927,19.58575 -28.57773,32.6102 -5.232436,9.16636 5.55897,17.00571 14.16359,13.50966 5.985592,-1.04951 14.463991,-5.10621 18.009167,-6.76055 -7.438684,4.85708 -17.173069,10.95035 -17.08598,20.83487 0.434399,8.87558 10.828459,12.73337 18.546101,10.15008 13.197982,-3.57543 24.768277,-11.43909 36.487745,-18.22381"
+      id="path1" />
+  <path
+      d="m 47.278271,92.521517 c -4.811663,-16.35966 -9.623327,-32.71932 -14.43499,-49.07898 14.314703,9.863913 28.629407,19.727825 42.94411,29.591738"
+      id="path2" />
+  <path
+      d="m 90.325034,54.993062 c -7.452428,7.618083 -17.60605,16.108533 -16.052675,28.295894 1.926118,11.811961 13.830083,23.114824 25.697978,18.168044 3.351733,0.0209 14.929823,-9.755793 7.401393,-2.952327 -6.76814,6.294437 -10.639835,17.262087 -5.1043,25.704477 4.45857,8.56056 14.95135,13.63065 23.76037,9.11252 5.96752,-2.44757 11.23472,-6.36627 16.5126,-10.09199"
+      id="path3" />
+  <path
+      d="m 93.907651,52.597207 c 19.487239,-9.863913 38.974489,-19.727826 58.461729,-29.591739 10.70595,14.434994 21.41191,28.869988 32.11786,43.304982 -12.99149,19.126367 -25.98299,38.25273 -38.97448,57.3791"
+      id="path4" />
+
+  <path
+      d="m 89.861509,53.547034 c 17.932521,23.397408 36.929291,46.127298 52.507261,71.212676 4.16612,7.47397 9.90435,17.26433 4.15009,25.50178"
+      id="path5" />
+  </g>
+</svg>
 
 <style>
+  path {
+    fill:none;
+    stroke-width: 5;
+    stroke-dasharray: none;
+    stroke-opacity: 1;
+  }
+  @media (prefers-color-scheme: dark) {
+    #path3, #path5 {
+    stroke: #f5f0ec;
+  }
+    #path1, #path4 {
+    stroke: #ff5f6d;
+  }
+  #path2 {
+    stroke: #f4a950;
+  }
+}
+
 @media (prefers-color-scheme: light) {
-  #dark {
-    display: none;
+  #path3, #path5 {
+    stroke: #3a2c35;
+  }
+  #path1, #path4 {
+    stroke: #ff5c57;
+  }
+  #path2 {
+    stroke: #ffb347;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  #light {
-    display: none;
-  }
-}
-
-img {
-  max-width: 100%;
-  min-width: 20%;
-  height: auto;
-}
-
-div {
-  display: flex;
-  justify-content: center;
-}
-
 </style>
 
-<script>
-</script>
