@@ -7,6 +7,16 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a:hover {
+  transition: 0.3s;
+}
+
 @media only screen and (max-width: 768px) {
   html {
     max-width: 600px;
@@ -27,6 +37,9 @@ body {
   a, h1 {
     color: #ff5f6d;
   }
+  a:hover {
+    text-shadow: 0 0 5px #ff0000;
+  }
   h2 {
     color: #f4a950;
   }
@@ -39,6 +52,9 @@ body {
   }
   a, h1 {
     color: #ff5c57;
+  }
+  a:hover {
+  text-shadow: 0 0 20px #ff0000;
   }
   h2 {
     color: #ffb347;
