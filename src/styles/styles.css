@@ -38,7 +38,8 @@ a:hover {
     color: #ff5f6d;
   }
   a:hover {
-    text-shadow: 0 0 5px #ff0000;
+    text-shadow: 0 0 5px #ff3f33;
+    color: #ff7a75;
   }
   h2 {
     color: #f4a950;
@@ -54,7 +55,8 @@ a:hover {
     color: #ff5c57;
   }
   a:hover {
-  text-shadow: 0 0 20px #ff0000;
+    text-shadow: 0 0 1px #ff3c52;
+    color: #ff7f8d;
   }
   h2 {
     color: #ffb347;
