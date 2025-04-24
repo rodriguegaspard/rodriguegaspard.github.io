@@ -53,8 +53,8 @@ a {
 }
 
 a:hover {
-  text-shadow: 0 0 5px var(--glow-text);
-  color: var(--neon-text);
+  text-shadow: 0 0 5px var(--glow-links);
+  color: var(--neon-links);
   transition: 0.3s;
 }
 
