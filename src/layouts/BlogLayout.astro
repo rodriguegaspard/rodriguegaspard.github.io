@@ -6,7 +6,7 @@ const allPosts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: 
 <BaseLayout title="The Rooster's Nest">
   <div class="blog">
     <ul>
-    {allPosts.map((post: any) => 
+    {allPosts.toReversed().map((post: any) => 
         <li>
           <article class="blogpost">
             <header>
@@ -24,23 +24,5 @@ const allPosts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: 
 <style>
   ul {
     list-style-type: none;
-  }
-
-  .blogpost{
-    border-bottom-style: solid;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .blogpost{
-      border-bottom-color: #ffb830;
-      border-bottom-width: 1px;
-    }
-  }
-
-  @media (prefers-color-scheme: light) {
-    .blogpost{
-      border-bottom-color: #ffbd69;
-      border-bottom-width: 1px;
-    }
   }
 </style>
