@@ -1,6 +1,6 @@
 <svg
-    width="600px"
-    height="600px"
+    width="150px"
+    height="150px"
     viewBox="0 0 200 200"
     version="1.1"
     id="rooster"
@@ -32,38 +32,6 @@
 
 <style>
 
-  path {
-    fill:none;
-    stroke-dasharray: none;
-    stroke-opacity: 1;
-  }
-
-  #rooster:hover {
-    animation: flicker 1.2s linear forwards;
-  }
-
-  #path3, #path5 {
-    stroke: var(--text);
-  }
-  #path1, #path4 {
-    stroke: var(--links);
-  }
-  #path2 {
-    stroke: var(--highlights);
-  }
-  #rooster:hover #path3, #rooster:hover #path5 {
-    stroke: var(--neon-text);
-    filter: drop-shadow(0px 0px 5px var(--glow-text));
-  }
-  #rooster:hover #path1, #rooster:hover #path4 {
-    stroke: var(--neon-links);
-    filter: drop-shadow(0px 0px 5px var(--glow-links));
-  }
-  #rooster:hover #path2 {
-    stroke: var(--neon-highlights);
-    filter: drop-shadow(0px 0px 5px var(--glow-highlights));
-  }
-
   @keyframes flicker {
     0%   { opacity: 1; }
     5%   { opacity: 0.2; }
@@ -75,6 +43,39 @@
     35%  { opacity: 0.6; }
     40%  { opacity: 1; }
     100% { opacity: 1; }
+  }
+
+  path {
+    fill:none;
+    stroke-dasharray: none;
+    stroke-opacity: 1;
+  } 
+
+  #path3, #path5 {
+    stroke: var(--text);
+  }
+  #path1, #path4 {
+    stroke: var(--links);
+  }
+  #path2 {
+    stroke: var(--highlights);
+  }
+
+  #rooster:hover {
+    animation: flicker 1.2s linear forwards;
+  }
+
+  #rooster:hover #path3, #rooster:hover #path5 {
+    stroke: var(--neon-text);
+    filter: drop-shadow(0px 0px 5px var(--glow-text));
+  }
+  #rooster:hover #path1, #rooster:hover #path4 {
+    stroke: var(--neon-links);
+    filter: drop-shadow(0px 0px 5px var(--glow-links));
+  }
+  #rooster:hover #path2 {
+    stroke: var(--neon-highlights);
+    filter: drop-shadow(0px 0px 5px var(--glow-highlights));
   }
 
 </style>
