@@ -2,81 +2,63 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 const isPrint = false;
 ---
-
 <BaseLayout title="Resumé">
   <div id="pdf-content">
-    <header>
-      <h1>Rodrigue GASPARD</h1>
-      <h2>Software Developer (Python, Rust) | FileMaker Consultant</h2>
-    </header>
-    <ul class="contact">
-      <li>📬 : <a href="mailto:rodriguegaspard@gmail.com">rodriguegaspard@gmail.com</a></li>
-      <li>📱 : <a href="https://wa.me/60167652453">(+60)167652453</a></li>
-      <li>💼 : <a href="https://www.linkedin.com/in/rodriguegaspard/">LinkedIn profile</a></li>
-      <li>💻 : <a href="https://github.com/rodriguegaspard">GitHub profile</a></li>
+  <header>
+    <h1>Rodrigue GASPARD</h1>
+  </header>
+  <section class="meta">
+    <span>📧 <a href="mailto:rodriguegaspard@gmail.com">rodriguegaspard@gmail.com</a></span><br />
+    <span>📞 +33 7 53 45 12 45</span><br />
+    <span>📍 France & Europe</span><br />
+    <span>💻 GitHub: <a href="https://github.com/rodriguegaspard">github.com/rodriguegaspard</a></span><br />
+    <span>🔗 LinkedIn: <a href="https://www.linkedin.com/in/rodriguegaspard">linkedin.com/in/rodriguegaspard</a></span><br />
+    <span>🌐 Portfolio: <a href="https://rodriguegaspard.github.io">rodriguegaspard.github.io</a></span>
+  </section>
+  <section>
+    <h2>🎓 Academic Background</h2>
+    <h3>UniKL MIIT — Master of Computer Science <span class="tech">(2023 – 2025)</span></h3>
+    <ul>
+      <li>📊 GPA: 3.89 / 4.0</li>
+      <li>📚 Topics: Deep Learning, Python, TensorFlow, Pandas, Keras, Computer Vision</li>
     </ul>
-    <section>
-      <h2>Summary</h2>
-      <p>Master’s graduate from UniKL MIIT, Malaysia, with 2 years of hands-on experience as a Software Developer in Angers, France. Actively seeking fully remote opportunities—open to full-time, part-time, or freelance roles. Strong interest in backend development, data engineering, and AI, but open to exploring other areas as well. Highly adaptable with flexible working hours, bringing a global perspective, solid technical skills, and a collaborative mindset to remote teams.</p>
-    </section>
-    <section>
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>HTML5 / CSS3 / JavaScript / TypeScript</li>
-        <li>React / Vue.js / Astro</li>
-        <li>C / x86 Assembly</li>
-        <li>C++ / C# / Java</li>
-        <li>Python / Pandas / Numpy / Matplotlib</li>
-        <li>Unix / Bash / zsh</li>
-        <li>Git / GitHub</li>
-        <li>TensorFlow / PyTorch / Keras / OpenCV / Ultralytics</li>
-        <li>Rust / WebAssembly</li>
-        <li>SQL / PostgreSQL / MariaDB / SQLite / MySQL</li>
-        <li>FileMaker Pro / FileMaker Server</li>
-        <li>VirtualBox / Docker / Kubernetes</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Experience</h2>
-      <div class="item">
-        <h3>Software Developer – ESAD TALM</h3>
-        <span class="date">March 2021 – November 2022</span>
-        <p>Designed and implemented a comprehensive relational database system from scratch using FileMaker Pro, unifying three schools under a single data infrastructure.</p>
-        <p>Developed customized layouts and tables to manage tuition, class schedules, invoices, mailing lists, diplomas, and contact information, drastically improving administrative efficiency.</p>
-        <p>Integrated Wero online payment system to streamline student payments for tuition and bookstore purchases.</p>
-        <p>Delivered significant time savings across all campuses by accelerating data entry and reducing manual errors.</p>
-        <p>Trained school administrative staff individually, supervised interns and maintained technical and user documentation ensuring smooth onboarding and sustained system usage.</p>
-        <p>Operated autonomously with minimal supervision, demonstrating strong initiative, adaptability, and self-management.</p>
-      </div>
-    </section>
-    <section>
-      <h2>Education</h2>
-      <div class="item">
-        <h3>Master’s Degree in Computer Science - Universiti Kuala Lumpur (UniKL) — GPA: 3.89</h3>
-        <span class="date">2023 – 2025</span>
-        <p>Specialized in Artificial Intelligence, Machine Learning, and Deep Learning.</p>
-        <p>Studied algorithmic complexity, design patterns (C#), management, and research methodology.</p>
-        <p>Hands-on experience with Python libraries: NumPy, Pandas, TensorFlow, PyTorch, Keras, and OpenCV.</p>
-        <p>Applied linear regression and other statistical models in practical ML contexts.</p>
-      </div>
-      <div class="item">
-        <h3>B.S. in Computer Science – University of Angers</h3>
-        <span class="date">2016 – 2020</span>
-        <p>Covered low-level programming (C, Pascal, x86 ASM), OOP (C++, C#, Java), and functional programming (OCaml)</p>
-        <p>Practical experience with React, Vue, SQL, Python, OpenGL, and Unix systems.</p>
-        <p>Studied graph theory, shell scripting, and computer graphics (OpenGL, SDL2).</p>
-      </div>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <div class="item">
-        <h3>Master's thesis</h3>
-        <span class="date">Efficient Vision-Based Hand Gesture Recognition on Low-Power Devices</span>
-        <p>Researched and implemented real-time hand gesture recognition using fine-tuned YOLOv11 models for object detection and pose estimation.</p>
-        <p>Conducted extensive benchmarking on CPU-focused platforms including a mid-range Dell laptop and a Raspberry Pi 4B, analyzing performance trade-offs.</p>
-        <p>Evaluated multiple model export formats (e.g., OpenVINO) to assess their impact on inference speed and accuracy.</p>
-        <p>Developed the system using Python, Keras, OpenCV, and Ultralytics, focusing on efficiency for edge devices.</p>
-      </div>
-    </section>
+    <h3>University of Angers — Bachelor of Computer Science <span class="tech">(2016 – 2020)</span></h3>
+    <ul>
+      <li>💡 Subjects: C, x86 Assembly, C++, C#, Java, React, Vue.js, SQL, Linux environments</li>
+    </ul>
+  </section>
+  <section>
+    <h2>💼 Professional Experience</h2>
+    <h3>ESAD TALM — Software Developer <span class="tech">(March 2021 – Nov. 2022)</span></h3>
+    <ul>
+      <li>⚙️ Developed backend modules and internal APIs for invoicing, scheduling, and HR statistics.</li>
+      <li>🗄️ Designed a unified database across 3 sites (3000+ contacts) and performed data migration.</li>
+      <li>💳 Integrated an online payment solution (Systempay).</li>
+      <li>🛠️ Tech stack: FileMaker, Python, SQL.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>🚀 Projects</h2>
+    <h3>✋ Vision-Based Hand Gesture Recognition (YOLO11)
+      <span class="tech">(March 2024 – Jan. 2025)</span>
+    </h3>
+    <ul>
+      <li>🧠 Built an optimized CPU inference pipeline on SBC (Raspberry Pi 4).</li>
+      <li>📈 Compared ONNX and OpenVINO models (latency, accuracy, size).</li>
+      <li>🎯 Fine-tuned a YOLO11 model on a custom hand-gesture dataset.</li>
+      <li>🛠️ Tech stack: Python, TensorFlow, Keras, OpenCV, Ultralytics.</li>
+    </ul>
+    <h3>🧩 Productivity Application (“Second Brain”) in Rust
+      <span class="tech">(2025 – Present)</span>
+    </h3>
+    <ul>
+      <li>🖥️ Developing a local-first backend application with a TUI (Ratatui).</li>
+      <li>📅 Features: calendar, kanban, mind-maps, flashcards using shared data models.</li>
+      <li>📂 Implemented a portable CSV-based storage system compatible with external tools.</li>
+    </ul>
+  </section>
+  <footer>
+    <p>📅 Updated on December 2025</p>
+  </footer>
   </div>
 </BaseLayout>
